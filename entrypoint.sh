@@ -1,5 +1,7 @@
 #!/bin/bash
 
+npm install
+
 cd functions; npm install
 
 if [ -z "${FIREBASE_TOKEN}" ]; then
@@ -11,6 +13,8 @@ if [ -z "${FIREBASE_PROJECT}" ]; then
     echo "FIREBASE_PROJECT is missing"
     exit 1
 fi
+
+cd ..
 
 firebase experiments:enable webframeworks
 
