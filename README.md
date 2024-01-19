@@ -1,6 +1,6 @@
-# Deploy to Firebase Functions for Node18
+# Deploy to Firebase for Node18
 
-A GitHub Action to deploy to Firebase Cloud Functions for Node18.
+A GitHub Action to deploy to Firebase for Node18.
 
 - Make sure that you checkout the repository using the [actions/checkout](https://github.com/actions/checkout) action
 - Make sure that you have the `firebase.json` file in the repository
@@ -23,7 +23,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - uses: dayzero-eng/deploy-firebase-functions@v0.0.1
+    - uses: dayzero-eng/deploy-firebase-functions@v0.0.5
       env:
         FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
         FIREBASE_PROJECT: firebase-project-id
@@ -43,7 +43,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - uses: dayzero-eng/deploy-firebase-functions@v0.0.2
+    - uses: dayzero-eng/deploy-firebase-functions@v0.0.5
       env:
         FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
         FIREBASE_PROJECT: firebase-project-id
