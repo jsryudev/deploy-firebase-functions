@@ -4,8 +4,8 @@ npm install
 
 cd functions; npm install
 
-if [ -z "${FIREBASE_TOKEN}" ]; then
-    echo "FIREBASE_TOKEN is missing"
+if [[ -z "${FIREBASE_TOKEN}" && -z "${GOOGLE_APPLICATION_CREDENTIALS}" ]]; then
+    echo "Access tokens are missing! Provide either FIREBASE_TOKEN or GOOGLE_APPLICATION_CREDENTIALS"
     exit 1
 fi
 
