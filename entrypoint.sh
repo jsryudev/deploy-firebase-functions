@@ -21,3 +21,4 @@ firebase experiments:enable webframeworks
 firebase deploy \
     -m "${GITHUB_REF} (${GITHUB_SHA})" \
     --project ${FIREBASE_PROJECT} \
+    ${FUNCTIONS_ONLY:+--only functions}
